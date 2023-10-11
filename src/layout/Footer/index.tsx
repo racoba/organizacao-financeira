@@ -19,14 +19,6 @@ export const Footer: React.FC = observer(() => {
 	const fontSizeBreakPoint = { md: "md", lg: "xl" };
 	const footerStrings = strings.footer;
 
-	const onClickGTagEvent = (eventName: string) => {
-		if (typeof gtag !== "undefined") {
-			gtag("event", eventName, {
-				event_category: "Site Forms",
-			});
-		}
-	};
-
 	return (
 		<Flex
 			py={10}
@@ -104,7 +96,6 @@ export const Footer: React.FC = observer(() => {
 								mr="5"
 								fontWeight="bold"
 								textAlign="end"
-								onClick={()=>onClickGTagEvent(`${navigation.name} Clicked`)}
 							>
 								{navigation.name}
 							</Text>
@@ -132,7 +123,6 @@ export const Footer: React.FC = observer(() => {
 								mr="5"
 								fontWeight="bold"
 								textAlign="end"
-								onClick={()=>onClickGTagEvent(`${navigation.name} Clicked`)}
 							>
 								{navigation.name}
 							</Text>
